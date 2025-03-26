@@ -13,6 +13,8 @@
     <modules>
         <!-- Add here the paths of all modules (e.g. <module>modules/MyModule</module>) -->
         <module>modules/TestPlugin</module>
+        <module>modules/StatTest</module>
+        <module>modules/StatTest2</module>
     </modules>
     
     <!-- Properties -->
@@ -71,6 +73,7 @@
             <classifier>linux-x64</classifier>
             <type>tar.gz</type>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.gephi/gephi-toolkit -->
     </dependencies>
     
     <build>
