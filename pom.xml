@@ -13,8 +13,7 @@
     <modules>
         <!-- Add here the paths of all modules (e.g. <module>modules/MyModule</module>) -->
         <module>modules/TestPlugin</module>
-        <module>modules/StatTest</module>
-        <module>modules/StatTest2</module>
+        <module>modules/HpcBetweenness</module>
     </modules>
     
     <!-- Properties -->

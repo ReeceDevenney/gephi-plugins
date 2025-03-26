@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Name: HpcBetweenness
+OpenIDE-Module-Short-Description: HPC implementation of betweenness centrality calculation
+OpenIDE-Module-Long-Description: uses the JNI to implement high performance code to calculate the betweenness centrality of the graph
+OpenIDE-Module-Display-Category: Other Category
