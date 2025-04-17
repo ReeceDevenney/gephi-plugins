@@ -4,7 +4,6 @@
  */
 package CRS;
 
-import java.io.File;
 
 /**
  *
@@ -14,12 +13,14 @@ public class Arguments {
     
      static {
         //File file = new File("./src/main/java/CRS/libnative.so");
-        System.load("/home/reecedevenney/UNCC/Research/gephi-plugins/modules/TestPlugin/src/main/java/CRS/libnative.so");
+    System.load("/home/reecedevenney/UNCC/Research/gephi-plugins/modules/TestPlugin/src/main/java/CRS/libbasebc.so");  
+    System.load("/home/reecedevenney/UNCC/Research/gephi-plugins/modules/TestPlugin/src/main/java/CRS/libnative.so");
+     
     }
     
     public static void main(String[] args) {
         int[] xadj = {0,1,3,4};
-        int[] adj = {1,0,2,1};
+         int[] adj = {1,0,2,1};
         double[] test = new Arguments().base_bc(xadj.length - 1,xadj, adj, xadj.length - 1);
         for(int i = 0; i < 3; i++){
         System.out.println(test[i]);
