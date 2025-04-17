@@ -38,10 +38,42 @@ public class Driver {
 	    System.err.println ("ohoh");
 	}
     }
+
+    public static void loadmyjar2() {
+	try {
+	    File f = new File ("../jarfileWithJNI/myJarWithJNI.jar");
+	    URLClassLoader loader = new URLClassLoader( new URL[] {f.toURI().toURL()} ) ;
+
+	    Class classToLoad = Class.forName("somethingelse.SomethingJarWithJNI", true, loader);
+	    Method method = classToLoad.getDeclaredMethod("test");
+	    method.invoke(null);
+	}
+	catch (MalformedURLException e) {
+	    System.err.println ("MalformedURLException "+e);
+	}
+	catch (ClassNotFoundException e) {
+	    System.err.println ("ClassNotFoundException "+e);
+	}
+	catch (NoSuchMethodException e) {
+	    System.err.println ("NoSuchMethodException "+e);
+	}
+	catch (IllegalAccessException e) {
+	    System.err.println ("IllegalAccessException "+e);
+	}
+	catch (InvocationTargetException e) {
+	    System.err.println ("InvocationTargetException "+e);
+	    System.err.println ("caused by : "+e.getTargetException());
+	}
+	catch (IllegalArgumentException e) {
+	    System.err.println ("IllegalArgumentException "+e);
+	}
+    }
+
     
     public static void main (String args[]) {
 	System.out.println("hello world");
 
 	loadmyjar();
+	loadmyjar2();
     }
 }
