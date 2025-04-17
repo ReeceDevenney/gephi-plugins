@@ -4,7 +4,8 @@ public class SomethingJarWithJNI {
     static {
 	System.out.println("idonsaiod");
 	//System.load("/home/erik/work/gephi-plugins/mockup/jarfileWithJNI/libnative.so");
-	System.loadLibrary("native");
+	System.load("/tmp/libnative.so");
+	//System.loadLibrary("native");
 	System.out.println("idonsaiod");
     }
     

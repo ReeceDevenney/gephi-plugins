@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "super.h"
 
-void super() {
+void supersupersupercool() {
   printf("this library is so super\n");
   
 }
