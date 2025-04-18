@@ -11,7 +11,7 @@ nativestub:
 
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
 
-CFLAGS=-fPIC -I $(JAVA_HOME)/include -I $(JAVA_HOME)/include/linux  -I ../mysupercoollibrary/
+CFLAGS=-fPIC -I $(JAVA_HOME)/include -I $(JAVA_HOME)/include/linux 
 LD=gcc
 LDFLAGS=-O3 -L ../mysupercoollibrary
 
@@ -19,4 +19,4 @@ native/somethingyet_SomethingJarWithJNI.o: native/somethingyet_SomethingJarWithJ
 	$(CC) $(CFLAGS) native/somethingyet_SomethingJarWithJNI.c -c -o $@
 
 libnativeyet.so: native/somethingyet_SomethingJarWithJNI.o
-	$(LD) $(LDFLAGS) -fPIC -shared -o $@ native/somethingyet_SomethingJarWithJNI.o -lsuper
+	$(LD) $(LDFLAGS) -fPIC -shared -o $@ native/somethingyet_SomethingJarWithJNI.o 
