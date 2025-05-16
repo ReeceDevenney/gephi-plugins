@@ -50,10 +50,6 @@ public class HpcBetweenness implements Statistics {
             idArray.add(n.getStoreId());
             nodeIndex++;
         }
-        System.out.println(idArray);
-        for(int i = 0; i < indexArray.length; i++){
-        System.out.println(indexArray[i] + "test");
-        }
         //int[] xadj = {0,1,3,4};
         //int[] adj = {1,0,2,1};
         double[] test = new HpcNative().base_bc(indexArray.length - 1, indexArray, edgeArray, indexArray.length - 1);

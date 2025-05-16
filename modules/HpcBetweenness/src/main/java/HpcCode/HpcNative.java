@@ -4,6 +4,8 @@
  */
 package HpcCode;
 
+import java.io.File;
+
 /**
  *
  * @author reecedevenney
@@ -11,8 +13,9 @@ package HpcCode;
 public class HpcNative {
     
     static {
-        //File file = new File("./src/main/java/CRS/libnative.so");
-        System.load("/home/reecedevenney/UNCC/Research/gephi-plugins/modules/HpcBetweenness/src/main/java/HpcCode/libnative.so");
+        File file = new File("src/main/java/HpcCode/libnative.so");
+        String absPath = file.getAbsolutePath();
+        System.load(absPath);
     }
     
     public static void main(String[] args) {
